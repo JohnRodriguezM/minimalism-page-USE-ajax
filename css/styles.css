@@ -18,3 +18,11 @@ li{
 img{
     max-width: 400px;
 }
+.container{
+    margin-top: 55px;
+    text-align: center;
+}
+
+.footer{
+    background-color: #E5E8E8 ;
+}

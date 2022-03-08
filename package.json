@@ -1,11 +1,19 @@
 {
   "name": "src",
   "version": "1.0.0",
-  "description": "",
+  "description": "a page with multiple mini-pages of information",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "John Jairo Rodriguez M <johnjairorodriguez384@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "page",
+    "minimalism",
+    "bulma",
+    "js",
+    "open",
+    "source"
+  ]
 }
