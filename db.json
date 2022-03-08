@@ -1,0 +1,19 @@
+{
+  "paginas": [
+    
+    {
+          "id": 1,
+          "title": "home de la pagina",
+          "image_url": "https://images.pexels.com/photos/7048694/pexels-photo-7048694.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "parrafo":"nuestra mision es disminuir la brecha de la probeza"
+
+      },
+      {
+          "id": 2,
+          "title": "abour us de la pagina",
+          "image_url" : "https://images.pexels.com/photos/1555909/pexels-photo-1555909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+          "parrafo":"nuestra mision es educar sobre la necesidad de las aves en los ecosistemas de la nacion "
+      }
+
+  ]
+}
