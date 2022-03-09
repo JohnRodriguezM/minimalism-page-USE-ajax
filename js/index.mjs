@@ -1,5 +1,9 @@
 'use strict';
+
+import {texto,$form} from './indexFirebase.mjs'
 const d = document;
+
+const form = d.getElementById('info')
 
 const anclaHome = d.getElementById('home')
 const anclaAbout = d.getElementById('about')
@@ -24,7 +28,7 @@ const getData = async () => {
     }
 }
 
-d.addEventListener('DOMContentLoaded',getData)
+ d.addEventListener('DOMContentLoaded',getData)
 
 d.addEventListener('click', e => {
     e.preventDefault()
@@ -39,7 +43,6 @@ const getDataAbout = async () => {
         let response = await fetch(urlAbout)
         console.log(response)
         let text = await response.text()
-        /* console.log(text) */
         main.innerHTML = text
     }
     catch(err){
@@ -58,10 +61,7 @@ d.addEventListener('click', e => {
 
 const getDataConatct = async () => {
     try{
-        let response = await fetch(urlContact)
-        console.log(response)
-        let text = await response.text()
-        main.innerHTML = text
+        main.innerHTML = texto
     }
     catch(err){
 

@@ -1,3 +1,18 @@
+
+const navbar = document.getElementById('navbarBasicExample')
+const hamburger = document.getElementById('hamburger')
+
+
+
+
+
+  document.addEventListener('click', (e)=> {
+    if(e.target.matches('.link')){
+        navbar.classList.toggle('is-active')
+        hamburger.classList.toggle('is-active')
+        navbar.style.transform = 'transition all 2s ease'
+    }
+})
 document.addEventListener('DOMContentLoaded', () => {
 
     // Get all "navbar-burger" elements
@@ -12,7 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
   
           // Get the target from the "data-target" attribute
           const target = el.dataset.target;
+          console.log(target)
           const $target = document.getElementById(target);
+          console.log($target)
   
           // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
           el.classList.toggle('is-active');
@@ -23,3 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
   });
+
+
+
