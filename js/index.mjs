@@ -1,17 +1,18 @@
 'use strict';
 
-import {texto,$form} from './indexFirebase.mjs'
 const d = document;
 
 const form = d.getElementById('info')
 
 const anclaHome = d.getElementById('home')
-const anclaAbout = d.getElementById('about')
-const anclaContac = d.getElementById('contact')
+const anclaHtml = d.getElementById('htmll')
+const anclaCss = d.getElementById('csss')
+const anclaJS = d.getElementById('jss')
 
 let url = 'http://127.0.0.1:5500/assets/home.html'
-let urlAbout = 'http://127.0.0.1:5500/assets/about.html'
-let urlContact = 'http://127.0.0.1:5500/assets/contact.html'
+let urlHtml = 'http://127.0.0.1:5500/assets/html.html'
+let urlCss = 'http://127.0.0.1:5500/assets/css.html'
+let urlJs = 'http://127.0.0.1:5500/assets/js.html'
 let main = document.querySelector('main')
 
 
@@ -38,9 +39,9 @@ d.addEventListener('click', e => {
 })
 
 
-const getDataAbout = async () => {
+const getDataHtml = async () => {
     try{
-        let response = await fetch(urlAbout)
+        let response = await fetch(urlHtml)
         console.log(response)
         let text = await response.text()
         main.innerHTML = text
@@ -53,25 +54,51 @@ const getDataAbout = async () => {
 
 d.addEventListener('click', e => {
     e.preventDefault()
-    if(e.target === anclaAbout){
-        getDataAbout()
+    if(e.target === anclaHtml){
+        getDataHtml()
     }
 })
 
 
-const getDataConatct = async () => {
+const getDataCss = async () => {
     try{
-        main.innerHTML = texto
+        let response = await fetch(urlCss)
+        let text = await response.text()
+        main.innerHTML = text
     }
     catch(err){
-
+        console.log(err)
+    }
+    finally{
     }
 }
 
 
 d.addEventListener('click', e => {
     e.preventDefault()
-    if(e.target === anclaContac){
-        getDataConatct()
+    if(e.target === anclaCss){
+        getDataCss()
+    }
+})
+
+//js
+const getDataJs = async () => {
+    try{
+        let response = await fetch(urlJs)
+        let text = await response.text()
+        main.innerHTML = text
+    }
+    catch(err){
+        console.log(err)
+    }
+    finally{
+    }
+}
+
+
+d.addEventListener('click', e => {
+    e.preventDefault()
+    if(e.target === anclaJS){
+        getDataJs()
     }
 })
